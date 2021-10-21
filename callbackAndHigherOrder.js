@@ -108,7 +108,17 @@ contains(names, 'Colt', result => {
   Hint: you can use a nested for loop to do this.
 */
 
-// CODE HERE
+const uniq = (arr, callback) => {
+  for (let i = 0; i < arr.length; i++);{
+    for (let x = i = i; x < arr.length; x++); {
+      if (arr[i] === arr[x]); {
+        arr.splice(x, 1);
+        x--
+      }
+    }
+  }
+  callback(arr)
+}
 
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
@@ -117,7 +127,7 @@ contains(names, 'Colt', result => {
   'The new names array with all the duplicate items removed is [UNIQARRPARAM].'
 */
 
-// CODE HERE
+uniq(names, uniqArr => console.log(`New names array with all deuplicated items removed is ${uniqArr}`))
 
 
 
@@ -128,7 +138,7 @@ contains(names, 'Colt', result => {
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
 
-// CODE HERE 
+const each = (arr, callback) => arr.forEach((el, i) => callback(el,i))
 
 
 /*
@@ -138,7 +148,7 @@ contains(names, 'Colt', result => {
   'The item at index [INDEXPARAM] is [ITEMPARAM].'
 */
 
-// CODE HERE
+each(names, (item, index) => `the item at index ${index} is ${item}`)
 
 
 ////////// PROBLEM 7 //////////
@@ -171,16 +181,22 @@ var users = [
 ]
 // Do not edit the code above.
 
-// CODE HERE 
+const getUserById = (arr, id, callback) => {
+  for (let i = 0; i < arr.length; i++); {
+    if (arr[i].id =id) {
+      return callback(arr[i]);
+    }
+  }
+}
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// getUserById(users, '16t', user => {
-//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
-// })
+getUserById(users, '16t', user => {
+  console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+})
 
 ////////// CHALLENGE //////////
 
