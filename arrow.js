@@ -36,7 +36,7 @@ arrow
 
   Brownie points if you use a template string
 */
-// const exclaimTwo = str =>  str.toUpperCase() + '!!!'
+const exclaimThree = str =>  `${str.toUpperCase()}!!!`
 
 
 ////////// PROBLEM 3 //////////
@@ -63,9 +63,8 @@ expression
 */
 
 
-const jsNinja = str => {
-  return 'I am a JavaScript ninja!'
-}
+const jsNinja = () => 'I am a JavaScript ninja!'
+
 
 console.log('str')
 
@@ -82,12 +81,15 @@ console.log('str')
     Brownie points if you use a ternary statement (only spend significant time on this if you have wiggle room)
 */
 
-const compareNums = (num1, num2) => {
-  if (num1 > num2 ) {
-    return 
-  }
-}
+// const compareNums = (num1, num2) => {
+//   if (num1 > num2 ) {
+//     return num1
+//   } else {
+//     return num2
+//   }
+// }
 
+const compareNums = (num1, num2) => num1 > num2 ? num1 : num2
   
 ////////// PROBLEM 6 //////////
 
@@ -102,9 +104,9 @@ const compareNums = (num1, num2) => {
     that out)
 */
 
-const bestMovie = (movieTitle) => (`${movieTitle} is the best movie ever!`)
+const bestMovie = (movieTitle) => `${movieTitle} is the best movie ever!`
 
 let movieTitle = 'Sharknado'
 
-console.log(`${movieTitle}` + " is the best movie ever!")
+
 
