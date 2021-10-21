@@ -42,7 +42,9 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 */
 
 // CODE HERE
-const postTaxPrices // = prices.map(/* Provide Your Callback Here );
+const postTaxPrices = prices.map(function(elem) {
+  return elem * 1.07
+})
 
 
 
@@ -60,8 +62,11 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 // CODE HERE
-const totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+const totalPopulation = populations.reduce(function(acc, elem) {
+  return acc + elem
+})
 
+const totalPopulation = populations.reduce((a, c) => a + c)
 
 
 ////////// PROBLEM 4 //////////
@@ -85,7 +90,9 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 // CODE HERE
-const myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
+const myStrongest = monstersInYourPocket.filter(function(elem){
+  return elem["CP"]
+})
 
 
 
